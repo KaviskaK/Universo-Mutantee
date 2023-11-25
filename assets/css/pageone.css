@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url(../images/welcome-1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    color: #5e6106;
+  }
+  header{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    width: 100%;
+  }
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    padding: 30px 0;
+  }
+nav .logo{
+    width: 100px;
+    cursor: pointer;
+    color: #7e8201;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 2px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #7e8201;
+    font-size: 1.2em;
+    background: transparent;
+    font-weight: bolder;
+    transition: transform 0.3s ease;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+.nav-menu a span{
+    position: absolute;
+    display: block;
+}
+@keyframes btn-anim1 {
+    0%{
+        left: -100%;
+    }
+    50%, 100%{
+        left: 100%;
+    }
+}
+.nav-menu a span:nth-child(1){
+    bottom: 2px;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #5e6106);
+    animation: btn-anim1 2s linear infinite;
+}
+nav ul li:hover{
+    transform: scale(1.4);
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    text-align: center;
+}
+section h1{
+    font-size: 3em;
+    margin: 10px;
+}
+section p{
+    font-size: 1.5em;
+}
+button{
+    color: #fff;
+    width: 6em;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    background: transparent;
+    font-weight: bolder;
+    border: 2px solid #5e6106;
+    transition: transform 0.3s ease;
+}
+button:hover{
+    transform: scale(1.2);
+    background-color: #7e8201;
+}
+#mobile-menu {
+    display: none;
+    position: absolute;
+    background: none;
+    top: 10px;
+    z-index: 10;
+    color: #fff;
+    cursor: pointer;
+    right: 0;
+    width: 50px;
+    border: none;
+}
+#mobile-menu .menu-bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+#mobile-menu.opened .menu-bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+#mobile-menu.opened .menu-bar:nth-child(2){
+   opacity: 0;
+}
+#mobile-menu.opened .menu-bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+/*About file*/
+.cards{
+    display: flex;
+    padding: 32px;
+}
+
+.cards.card{
+   
+    padding: 32px 40px;
+    border-radius: 8px;
+    margin-left: 32px;
+}
+.card.icon{
+  width: 64px;
+  height: 64px;
+}
+
+.card img{
+  margin-top: 70px;
+  width: 100%;
+}
+div.content-sap{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.7rem;
+}
+div.main-content{
+  gap: 20px;
+  padding: 73px;
+  color: #fff;
+  font-size: 1.5em;
+}
+.main-content h3{
+  color: #5e6106;
+  margin-bottom: 30px;
+}
+.main-content span{
+  color: #7e8201;
+}
+
+
+/* File Sobre
+*/
+
+.textoum {
+  text-align: left;
+}
+
+.textoum a {
+  font-size: 24px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+  
+    nav .logo {
+      font-size: 1.5em;
+    }
+    .nav-menu.active {
+      display: flex;
+      flex-direction: column;
+    }
+    #mobile-menu {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 0;
+      z-index: 10;
+    }
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 10%;
+      left: 0;
+      width: 100%;
+      z-index: 9;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    .nav-menu li{
+      margin: 2px;
+      padding: 2px;
+    }
+    section h1 {
+      font-size: 1.5em;
+    }
+  
+    section p {
+      font-size: 1.2em;
+    }
+  
+    button {
+      font-size: 1em;
+      padding: 8px 0;
+      width: 100px;
+    }
+    .new-section{
+      flex-direction: column;
+    }
+    .new-section img{
+      width: 80%;
+      padding: 10px;
+      margin: 20px;
+    }
+
+    .card.icon{
+      width: 64px;
+      height: 64px;
+    }
+    
+    .card img{
+      width: 200px;
+    }
+    
+    .cards{
+      flex-direction: column;
+    }
+}
+
